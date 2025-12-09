@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Refresh" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body,h2,p,section{margin: 0;}
+	@font-face {
+		font-family: tfont;
+		src: url("./all/tfont.ttf") format("truetype");}
+
+	@font-face{
+		font-family: 'DH';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/designhouseOTFLight00.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+	}
+	body {
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	height: 100vh;
+    	margin: 0;
+    	background-color: rgb(255, 254, 252 / 1.0);
+ 		 }
+ 	@property --line {
+    syntax: '<percentage>';
+    initial-value: 100%;
+    inherits: false;}
+ 	a {
+		color: inherit;         
+		text-decoration: none;
+	}
+	 h1 {
+ 		font-family: 'tfont';
+ 		text-align: center;
+ 		font-size: clamp(30pt, 6vw, 100pt);
+ 		font-weight: 300;
+ 		line-height: ;
+ 	}
+	 .boom {
+    	color: black;
+    	text-decoration: underline;
+		text-decoration-thickness: 3px;
+  		text-decoration-color: blue;
+    	--line: 100%;
+    	mask-image: linear-gradient(to bottom, #000 var(--line), transparent var(--line));
+   		 -webkit-mask-image: linear-gradient(to bottom, #000 var(--line), transparent var(--line));
+   		 mask-size: 100% 6px;
+   		 -webkit-mask-size: 100% 6px;
+   		 transition: --line 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+	.why {
+	  position: fixed;
+	  bottom: 30px;
+	  left: 30px;
+	  font-family: 'DH', sans-serif;
+	  font-size: clamp(1pt, 3vw, 15pt);
+	  font-weight: 600;
+	  color: #000;
+	  opacity: 0.5;
+	  }
+
+	  .boom:hover {
+	    --line: 60%;
+	    color: blue;
+	 	 }
+</style>
+</head>
+<body>
+	<h1>
+		<a href="llm.html" class="boom">LLM</a>은<br>
+		<a href="lie.html" class="boom">거짓말</a>을<br>
+		<a href="why.html" class="boom">왜</a> 하는가</h1>
+
+	<div class="why">WHY DO LLM LIE?</div>
+</body>
+</html>
